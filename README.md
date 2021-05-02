@@ -33,7 +33,9 @@ Url for this http://127.0.0.1:8000/core/api/pizza-list/
 Url for filter using size and type of pizza http://127.0.0.1:8000/core/api/pizza-filter/<str:key>=<str:value>
 
 key = type,size
+
 value for type = Regular, Square
+
 value for size = Small, Large, Medium
 
 
