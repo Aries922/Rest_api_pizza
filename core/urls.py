@@ -12,4 +12,5 @@ urlpatterns = [
     path('pizza-create/', views.pizzaCreate, name='createpizza'),
     path('pizza-update/<str:pk>/', views.pizzaUpdate, name='updatepizza'),
     path('pizza-delete/<str:pk>/', views.pizzaDelete, name='deletepizza'),
+    path('pizza-filter/<str:key>=<str:value>', views.pizzaFilter, name='filterbytype'),
 ]
