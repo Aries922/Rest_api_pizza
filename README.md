@@ -28,3 +28,29 @@ For creating Pizza url is http://127.0.0.1:8000/core/api/pizza-create/
 the response of this contain the information about the toppings, size and type of Pizza
 
 Url for this http://127.0.0.1:8000/core/api/pizza-list/
+
+## Allow filtering the list of pizza returned by the API based on Size & Type of Pizza
+
+
+
+
+
+## API endpoint that allows the user to edit or delete any pizza from the database.
+Url for edit http://127.0.0.1:8000/core/api/pizza-update/<int:id>
+
+Url for delete http://127.0.0.1:8000/core/api/pizza-delete/<int:id>
+
+## Requirements
+- Python3 
+- mongodb
+- pip
+- you have create database using mongodb commands name "dbp"
+
+## steps to run the project
+
++ Clone project 
++ Open Terminal go to ths dir of cloned project
++ Run Command "pip install -r requirerment.txt" or "pip3 install -r requirerment.txt"
++ Run command "python manage.py migrate" or "python3 manage.py migrate"
++ Run command "python manage.py runserver" or "python3 manage.py runserver"
++ Now use api
