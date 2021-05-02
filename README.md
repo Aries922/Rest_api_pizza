@@ -21,18 +21,20 @@ For creating Pizza url is http://127.0.0.1:8000/core/api/pizza-create/
             "Small","Large"
         ],
         "pizza_toppings": [
-            "Corn"
+            "Corn","Onion"
         ]
     }
-## API endpoint which lists the information about all the stored pizza 
+## API endpoint which give list of the stored pizza 
 the response of this contain the information about the toppings, size and type of Pizza
 
 Url for this http://127.0.0.1:8000/core/api/pizza-list/
 
 ## Allow filtering the list of pizza returned by the API based on Size & Type of Pizza
+Url for filter using size and type of pizza http://127.0.0.1:8000/core/api/pizza-filter/<str:key>=<str:value>
 
-
-
+key = type,size
+value for type = Regular, Square
+value for size = Small, Large, Medium
 
 
 ## API endpoint that allows the user to edit or delete any pizza from the database.
