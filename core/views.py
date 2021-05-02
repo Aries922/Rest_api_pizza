@@ -47,6 +47,18 @@ def pizzaDelete(request, pk):
 
     return Response(serializer.data)
 
+@api_view(['GET'])
+def pizzaFilter(request,key,value):
+    pizzas = []
+    if key == "size":
+        pizzas = PizzaTypes.objects.filter(pizza_size=value)
+    elif key == "type":
+        pizzas = PizzaTypes.objects.filter(pizza_type=value)
+    else:
+        pizzas = PizzaTypes.objects.all()
+    serializer = ListPizza(pizzas, many=True)
+    return Response(serializer.data)
+
 
 class CreateUserView(generics.CreateAPIView):
     serializer_class = UserSerializer
